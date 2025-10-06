@@ -1,0 +1,15 @@
+{
+  "name": "blue-desert",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Fictional free-roam prototypes (2D Phaser and 3D Babylon)",
+  "scripts": {
+    "start:2d": "npx http-server ./bbgame -p 8000 -c-1",
+    "start:3d": "npx http-server ./bb3d -p 8001 -c-1",
+    "start": "npm-run-all --parallel start:2d start:3d"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
