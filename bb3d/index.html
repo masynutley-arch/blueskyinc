@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blue Desert 3D — Fictional Free-Roam</title>
+    <style>
+      html, body { height: 100%; margin: 0; padding: 0; background: #0f0f12; color: #f0f0f0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+      #app { position: absolute; inset: 0; }
+      #overlay { position: absolute; top: 12px; left: 12px; right: 12px; color: #f0f0f0; pointer-events: none; }
+      .disclaimer { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.85); text-align: center; padding: 24px; }
+      .panel { background: rgba(15,15,18,0.9); border: 1px solid #333; border-radius: 8px; padding: 12px 16px; }
+      .btn { pointer-events: auto; display: inline-block; padding: 8px 12px; margin: 8px; background: #2a2f3a; border: 1px solid #3a3f4a; border-radius: 6px; color: #f0f0f0; cursor: pointer; user-select: none; }
+      .btn:hover { background: #3a4050; }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="renderCanvas"></canvas>
+      <div id="overlay"></div>
+      <div id="disclaimer" class="disclaimer">
+        <div>
+          <div class="panel">
+            <h2>Blue Desert 3D — Fictional Free-Roam</h2>
+            <p>All content is fictional and satirical. No real processes or instructions are depicted. Play responsibly.</p>
+            <div class="btn" id="continueBtn">Continue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/babylonjs@7.19.0/babylon.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
