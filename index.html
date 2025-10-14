@@ -1,1 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Player Demo</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Minimal YouTube IFrame API player" />
+</head>
+<body>
+  <main class="container">
+    <h1>YouTube Player</h1>
 
+    <section class="controls">
+      <label for="videoId">YouTube URL or ID</label>
+      <div class="input-row">
+        <input id="videoId" type="text" placeholder="e.g. https://youtu.be/M7lc1UVf-VE" />
+        <button id="load" type="button">Load</button>
+      </div>
+      <div class="buttons">
+        <button id="play" type="button">Play</button>
+        <button id="pause" type="button">Pause</button>
+      </div>
+    </section>
+
+    <div id="player" class="player"></div>
+
+    <p class="hint">Tip: add ?v=VIDEO_ID to the URL to preload a video.</p>
+  </main>
+
+  <script src="./player.js"></script>
+  <!-- The IFrame API script is dynamically injected by player.js -->
+  
+</body>
+</html>
