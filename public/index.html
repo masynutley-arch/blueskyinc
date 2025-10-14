@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Viewer (Compliant)</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>YouTube Viewer</h1>
+    <p class="subtitle">Uses official YouTube IFrame API. No bypassing.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <form id="load-form">
+        <label for="video-input">YouTube URL or Video ID</label>
+        <input id="video-input" name="video" type="text" placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ" required />
+        <button type="submit">Load Video</button>
+      </form>
+
+      <details class="advanced">
+        <summary>Advanced options</summary>
+        <div class="advanced-grid">
+          <label for="start-seconds">Start at (seconds)</label>
+          <input id="start-seconds" type="number" min="0" step="1" placeholder="0" />
+
+          <label for="autoplay">Autoplay</label>
+          <select id="autoplay">
+            <option value="0" selected>No</option>
+            <option value="1">Yes</option>
+          </select>
+
+          <label for="cc">Closed captions</label>
+          <select id="cc">
+            <option value="0" selected>Default</option>
+            <option value="1">Force on</option>
+          </select>
+
+          <label for="controls">Show controls</label>
+          <select id="controls">
+            <option value="1" selected>Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+      </details>
+    </section>
+
+    <section class="player-section">
+      <div id="player"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Built for compliant viewing using official APIs.</p>
+  </footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
